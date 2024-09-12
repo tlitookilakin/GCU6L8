@@ -1,0 +1,6 @@
+<h2>Menu</h2>
+<div class="row">
+    @for (donut of donuts.results; track $index) {
+        <app-donut-item class="col-4" [donut]="donut" />
+    }
+</div>

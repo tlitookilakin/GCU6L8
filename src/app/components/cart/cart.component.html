@@ -1,0 +1,33 @@
+<h2>Checkout</h2>
+<hr>
+<table class="table">
+	<thead>
+		<tr>
+			<th>Flavor</th>
+			<th>Count</th>
+			<th>Unit Price</th>
+			<th>Total Price</th>
+			<th class="small-col"></th>
+		</tr>
+	</thead>
+	<tbody>
+		@for (item of getCartItems(); track $index) {
+			<tr>
+				<td>{{item.name}}</td>
+				<td>{{item.count}}</td>
+				<td>$1.00</td>
+				<td>${{item.count}}.00</td>
+				<td><button class="delete" (click)="removeItem(item.id)">&#xF659;</button></td>
+			</tr>
+		}
+	</tbody>
+</table>
+<hr>
+<div class="row">
+	<p>Total: </p>
+	<p>${{getCount()}}.00</p>
+</div>
+<div class="row">
+	<a class="btn btn-outline-primary" routerLink="/Donuts">&lt; Back</a>
+	<button class="btn btn-primary btn-pulse" (click)="checkout()">Confirm Purchase</button>
+</div>
