@@ -17,17 +17,17 @@
 				<td>{{item.count}}</td>
 				<td>$1.00</td>
 				<td>${{item.count}}.00</td>
-				<td><button class="delete" (click)="removeItem(item.id)">&#xF659;</button></td>
+				<td><button class="delete btn btn-outline-danger" (click)="removeItem(item.id)">&#xF659;</button></td>
 			</tr>
 		}
 	</tbody>
 </table>
 <hr>
-<div class="row">
+<div class="spread">
 	<p>Total: </p>
 	<p>${{getCount()}}.00</p>
 </div>
-<div class="row">
+<div class="spread">
 	<a class="btn btn-outline-primary" routerLink="/Donuts">&lt; Back</a>
 	<button class="btn btn-primary btn-pulse" (click)="checkout()">Confirm Purchase</button>
 </div>

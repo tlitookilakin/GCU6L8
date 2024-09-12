@@ -1,10 +1,14 @@
-<nav class="container">
-	<h1 routerLink="/Donuts">Donut Joe's</h1>
-	<a routerLink="/Checkout">Cart ({{getCartCount()}})</a>
-</nav>
-<main class="container">
-	<router-outlet />
-</main>
-<footer>
-
-</footer>
+<div class="main">
+	<header>
+		<nav class="spread">
+			<h1 routerLink="/Donuts">Donut Joe's</h1>
+			<a routerLink="/Checkout" class="btn btn-primary btn-pulse">
+				<i class="bi bi-cart"></i> Cart ({{getCartCount()}})
+			</a>
+		</nav>
+	</header>
+	<main class="container">
+		<router-outlet />
+	</main>
+	<footer>&copy;Wren Grasley 2024</footer>
+</div>

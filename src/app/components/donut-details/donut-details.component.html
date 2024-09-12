@@ -7,7 +7,7 @@
 	</figcaption>
 </figure>
 <hr>
-<article>
+<article class="container">
 	<h4>Extras:</h4>
 	<ul>
 		@for (extra of donut.extras; track $index) {
@@ -16,11 +16,13 @@
 	</ul>
 	<p class="calories">{{donut.calories}} calories</p>
 	<hr>
-	<div class="row">
+	<div class="bottom spread container">
 		<a class="btn btn-outline-primary" routerLink="/Donuts">&lt; Back</a>
 		<form class="row" (submit)="addToCart()">
-			<input type="number" class="form-input" [(ngModel)]="donutCount" name="count">
-			<button type="submit" class="btn btn-primary btn-pulse">Add to cart</button>
+			<div class="col-6">
+				<input type="number" class="form-control" [(ngModel)]="donutCount" name="count">
+			</div>
+			<button type="submit" class="btn btn-primary btn-pulse col-6">Add to cart</button>
 		</form>
 	</div>
 </article>
